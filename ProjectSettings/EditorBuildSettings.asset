@@ -6,6 +6,13 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Lauri - menu language.unity
+    guid: 4284bc5353a35a84ebee294eb00c11ec
+  - enabled: 1
+    path: Assets/Scenes/Lauri - menu difficulty.unity
+    guid: 3b84a6dc3b463384e86ce876ac04a832
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.input.settings: {fileID: 11400000, guid: e7b5010a1215d36418b27f23ce6ed2c0, type: 2}

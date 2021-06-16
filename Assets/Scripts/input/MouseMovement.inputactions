@@ -1,0 +1,33 @@
+{
+    "name": "MouseMovement",
+    "maps": [
+        {
+            "name": "Movements",
+            "id": "cc05d7ae-bf60-4afc-b473-ec1df85d612a",
+            "actions": [
+                {
+                    "name": "MouseMove",
+                    "type": "PassThrough",
+                    "id": "68568eb3-251f-40d0-81bb-1dce953f1abd",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "09d484c0-252f-43ee-9236-575ce02e6af3",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MouseMove",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
