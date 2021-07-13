@@ -6,13 +6,29 @@ public class CardScript : MonoBehaviour
 {
     public GameObject card;
 
+    SpriteRenderer spriteRenderer;
+    public Sprite[] faces;
+    public Sprite back;
+    public int faceIndex;
 
-    public void flipCard()
+
+    public void OnMouseDown()
     {
-        card.GetComponent<GameObject>().transform.position = new Vector3(100, 200, 0);
+        if (spriteRenderer.sprite == back)
+        {
+            spriteRenderer.sprite = faces[faceIndex++];
+        }
+        else
+        {
+            spriteRenderer.sprite = back;
+        }
     }
 
-
+    private void Awake()
+    {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRenderer.sprite = back;
+    }
     void Start()
     {
 
