@@ -10,13 +10,14 @@ public class CardScript : MonoBehaviour
     public Sprite[] faces;
     public Sprite back;
     public int faceIndex;
-
+    
+    
 
     public void OnMouseDown()
     {
         if (spriteRenderer.sprite == back)
         {
-            spriteRenderer.sprite = faces[faceIndex++];
+            spriteRenderer.sprite = faces[faceIndex++]; // Now the image changes each time when clicking
         }
         else
         {
@@ -26,8 +27,13 @@ public class CardScript : MonoBehaviour
 
     private void Awake()
     {
+        
         spriteRenderer = GetComponent<SpriteRenderer>();
         spriteRenderer.sprite = back;
+        spriteRenderer.size += new Vector2(20.05f, 40.00f);
+
+
+
     }
     void Start()
     {
