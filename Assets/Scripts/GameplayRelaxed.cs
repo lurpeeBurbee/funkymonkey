@@ -22,7 +22,7 @@ public class GameplayRelaxed : MonoBehaviour
         //Cards.GetComponent<GameObject>().transform.position = new Vector3(100, 200, 0);
         //imagePlaceholder = cardPrefab.GetComponentInChildren<Image>();
         //imagePlaceholder.color = Color.red;
-        float yPosition = 200f;
+        float yPosition = 400f;
         float xPosition = 140f;
 
         for (int i = 0; i < 8; i++)
@@ -40,23 +40,24 @@ public class GameplayRelaxed : MonoBehaviour
 
             faceindexes.Remove(faceindexes[shuffleNumber]);
 
-            xPosition += 120;
+            xPosition += 140;
+          
 
             if (i == ((originalLength / 2) - 1))
             {
                 xPosition = 140f;
-                yPosition = 70f;
+                yPosition = 180f;
             }
 
 
         }
 
-
+        cardPrefab.SetActive(false);
     }
 
     private void Awake()
     {
-        cardPrefab = GameObject.Find("Button");
+        cardPrefab = GameObject.Find("Card Button");
     }
 
     void Update()
