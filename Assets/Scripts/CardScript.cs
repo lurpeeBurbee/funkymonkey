@@ -4,27 +4,37 @@ using UnityEngine;
 
 public class CardScript : MonoBehaviour
 {
+    GameObject GameControl;
     SpriteRenderer spriteRenderer;
     public Sprite[] faces;
     public Sprite back;
     public int faceIndex;
+    public bool matched = false;
 
     public void OnMouseDown()
     {
-        if (spriteRenderer.sprite == back)
+        if (matched == false)
         {
-            spriteRenderer.sprite = faces[faceIndex]; // Now the image changes each time when clicking
-            
-            spriteRenderer.size += new Vector2(100f, 200f);
-        }
-        else
-        {
-            spriteRenderer.sprite = back;
+            if (spriteRenderer.sprite == back)
+            {
+                if (GameControl.GetComponent<GameplayRelaxed>().TwoCardsUp() == false)
+                {
+                    spriteRenderer.sprite = faces[faceIndex]; // Now the image changes each time when clicking
+                    matched = GameControl.GetComponent<GameplayRelaxed>().CheckMatch();
+                    spriteRenderer.size += new Vector2(100f, 200f);
+                }
+            }
+            else
+            {
+                spriteRenderer.sprite = back;
+                GameControl.GetComponent<GameplayRelaxed>().RemoveVisibleFace(faceIndex);
+            }
         }
     }
 
     private void Awake()
-    {    
+    {
+        GameControl = GameObject.Find("GameControl");
         spriteRenderer = GetComponent<SpriteRenderer>();
 
        
@@ -34,7 +44,6 @@ public class CardScript : MonoBehaviour
 
     }
 
-    // Update is called once per frame
     void Update()
     {
         
