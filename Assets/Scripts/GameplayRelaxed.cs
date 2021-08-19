@@ -43,14 +43,13 @@ public class GameplayRelaxed : MonoBehaviour
                 xPosition = 140f;
                 yPosition = 180f;
             }
+        }
 
         if (cardPrefab.GetComponent<CardScript>() != null)
         {
 
             cardPrefab.GetComponentInChildren<CardScript>().faceIndex = faceindexes[0];
             //cardPrefab.SetActive(false);
-        }
-
         }
 
     }
