@@ -10,12 +10,14 @@ public class GameControl : MonoBehaviour
     public static System.Random rnd = new System.Random();
     public int shuffleNum = 0;
     int[] visibleFaces = { -1, -2 };
+    bool success;
 
     void Start()
     {
         int originalLength = faceIndexes.Count;
-        float yPosition = 400f;
-        float xPosition = 140f;
+        float yPosition = token.transform.position.y;
+        float xPosition = token.transform.position.x + 140;
+
         for (int i = 0; i < 7; i++)
         {
             shuffleNum = rnd.Next(0, (faceIndexes.Count));
@@ -27,7 +29,7 @@ public class GameControl : MonoBehaviour
             faceIndexes.Remove(faceIndexes[shuffleNum]);
 
             xPosition += 140;
-            if (i == ((originalLength / 2) - 1))
+            if (i == ((originalLength / 2) - 2))
             {
                 xPosition = 140f;
                 yPosition = 180f;
@@ -72,13 +74,15 @@ public class GameControl : MonoBehaviour
 
     public bool CheckMatch()
     {
-        bool success = false;
+        success = false;
         if(visibleFaces[0] == visibleFaces[1])
         {
             visibleFaces[0] = -1;
             visibleFaces[1] = -2;
             success = true;
+            Debug.Log("Found 2 pairs!");
         }
+        print("success is " + success);
         return success;
     }
 
