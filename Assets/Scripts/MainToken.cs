@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class MainToken : MonoBehaviour
 {
+    private GameObject thiscard;
     GameObject gameControl;
     Image img;
     public Sprite[] faces;
@@ -16,6 +17,9 @@ public class MainToken : MonoBehaviour
 
     public void OnMouseDown()
     {
+        print("match is " + matched);
+        print("2 cards up is " + twoCardsUp);
+
         if (matched == false)
         {
             if (img.sprite == back)
@@ -33,22 +37,28 @@ public class MainToken : MonoBehaviour
                 gameControl.GetComponent<GameControl>().RemoveVisibleFace(faceIndex);
             }
         }
-        if (matched)
+        if (matched && twoCardsUp) {
         {
             button = false;
-            print("button is false");
+            //thiscard.SetActive(false);
+            print("Can't turn the card anymore");
                 //img.sprite = faces[faceIndex];
         }
+    }
     }
 
     private void Awake()
     {
+        // thiscard = GetComponent<GameObject>();
+
         gameControl = GameObject.Find("GameControl");
         img = GetComponent<Image>();
         img.sprite = back;
         matched = gameControl.GetComponent<GameControl>().CheckMatch();
         twoCardsUp = gameControl.GetComponent<GameControl>().TwoCardsUp();
+        
         button = GetComponent<Button>().IsInteractable();
 
     }
 }
+

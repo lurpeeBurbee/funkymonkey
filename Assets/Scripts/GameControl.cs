@@ -44,6 +44,7 @@ public class GameControl : MonoBehaviour
         if(visibleFaces[0] >= 0 && visibleFaces[1] >= 0)
         {
             cardsUp = true;
+            print("2 cards are up!");
         }
         return cardsUp;
     }
