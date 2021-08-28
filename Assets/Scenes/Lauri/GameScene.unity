@@ -410,7 +410,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: a5e2591d1297e7f43b482b1de137bce9, type: 3}
   - {fileID: 21300000, guid: 3e0f30442ea43194fb0b87acc2eea30b, type: 3}
   - {fileID: 21300000, guid: 5a4b0b4f2b40e694badd855578224d27, type: 3}
-  - {fileID: 21300000, guid: d38113f3c64e96c4c8bd18521d0757c1, type: 3}
+  - {fileID: 21300000, guid: 575c9a8d1b5aacb4fb85c0668d468c94, type: 3}
   back: {fileID: 21300000, guid: f7444175cc4fb6d489529d935522b838, type: 3}
   faceIndex: 0
   matched: 0
