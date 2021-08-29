@@ -407,10 +407,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   faces:
-  - {fileID: 21300000, guid: a5e2591d1297e7f43b482b1de137bce9, type: 3}
   - {fileID: 21300000, guid: 3e0f30442ea43194fb0b87acc2eea30b, type: 3}
+  - {fileID: 21300000, guid: a5e2591d1297e7f43b482b1de137bce9, type: 3}
+  - {fileID: 21300000, guid: 575c9a8d1b5aacb4fb85c0668d468c94, type: 3}
   - {fileID: 21300000, guid: 5a4b0b4f2b40e694badd855578224d27, type: 3}
-  - {fileID: 21300000, guid: d38113f3c64e96c4c8bd18521d0757c1, type: 3}
   back: {fileID: 21300000, guid: f7444175cc4fb6d489529d935522b838, type: 3}
   faceIndex: 0
   matched: 0
@@ -621,7 +621,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 400
+  orthographic size: 243.43951
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -645,7 +645,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 757, y: 426, z: -10}
+  m_LocalPosition: {x: 462, y: 270.96, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -928,7 +928,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -777, y: -492}
+  m_AnchoredPosition: {x: -799, y: -448.4}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1377094508
@@ -988,9 +988,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1377094508}
+      - m_Target: {fileID: 11500000, guid: 120c551e0a522214090578ca8f4b0254, type: 3}
         m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
-        m_MethodName: loadScene
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
