@@ -14,7 +14,7 @@ public class GameControl : MonoBehaviour
 
     void Start()
     {
-        int originalLength = faceIndexes.Count;
+        //int originalLength = faceIndexes.Count;
         float yPosition = token.transform.position.y;
         float xPosition = token.transform.position.x + 140;
 
@@ -28,12 +28,12 @@ public class GameControl : MonoBehaviour
             temp.GetComponent<MainToken>().faceIndex = faceIndexes[shuffleNum];
             faceIndexes.Remove(faceIndexes[shuffleNum]);
 
-            xPosition += 140;
-            if (i == ((originalLength / 2) - 2))
-            {
-                xPosition = 140f;
-                yPosition = 180f;
-            }
+            //xPosition += 140;
+            //if (i == ((originalLength / 2) - 2))
+            //{
+            //    xPosition = 140f;
+            //    yPosition = 180f;
+            //}
         }
         token.GetComponent<MainToken>().faceIndex = faceIndexes[0];
     }
