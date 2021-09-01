@@ -1,33 +1,38 @@
-using UnityEngine.Audio;
 using UnityEngine;
-using System;
 
-public class AudioManager : MonoBehaviour 
-{ 
+public class AudioManager : MonoBehaviour
+{
+    public GameObject audioManager;
+    public Sound[] spokenSounds;
+    public Sound[] playedSounds;
+    public AudioSource source;
+    public AudioClip clip;
 
-    public Sound[] sounds;
-
-    // Start is called before the first frame update
-    //void Awake() {
-    //    foreach (Sound s in sounds)
-           
+    void Start()
+    {
+        //foreach (Sound s in spokenSounds)
         //{
-        //gameObject.AddComponent<AudioSource>();
-        //Source.clip = s.clip;
+        //    //gameObject.AddComponent<AudioSource>();
+        //    source = GetComponent<AudioSource>();
+        //    source.clip = s.clip;
 
-        //s.source.volume = s.volume;
-        //s.source.pitch = s.pitch;
+        //    s.source.volume = s.volume;
+        //    s.source.pitch = s.pitch;
 
         //}
-        
-    //}
+        audioManager.GetComponent<GameObject>();
+        source = audioManager.GetComponent<AudioSource>();
+
+    }
+
+    public void playSpokenSound()
+    {
+        source.PlayOneShot(clip, 0.1f);
+    }
+    public void Play(string name)
+    {
 
 
-    //public void Play (string name)
-    //{
-    //Sound s = Array.Find(sounds, sound => sound.name == name);
-    //s.source.Play();
 
-        
-    //}
+    }
 }
