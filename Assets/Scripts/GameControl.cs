@@ -16,13 +16,15 @@ public class GameControl : MonoBehaviour
     void Start()
     {
         //int originalLength = faceIndexes.Count;
+        GameObject.FindGameObjectWithTag("StartMusic").GetComponent<StartMusic>().StopStartMusic();
+
         float yPosition = token.transform.position.y;
         float xPosition = token.transform.position.x + 140;
         maxCards = 7;
         for (int i = 0; i < maxCards; i++)
         {
-            //shuffleNum = rnd.Next(0, (faceIndexes.Count));
-            shuffleNum = rnd.Next(0, (maxCards + 1));
+            shuffleNum = rnd.Next(0, (faceIndexes.Count));
+
             var temp = Instantiate(token, new Vector3(
                 xPosition, yPosition, 0),
                 Quaternion.identity, GameArea.transform);

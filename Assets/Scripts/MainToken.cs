@@ -14,13 +14,26 @@ public class MainToken : MonoBehaviour
     public bool matched = false;
     public bool twoCardsUp;
     public GameObject gameCanvas;
-    //bool button;
+
+    public bool BackSideVisible()
+    {
+        if (img.sprite != back)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+
+    }
+
 
     public void OnMouseDown()
     {
         print("match is " + matched);
         print("2 cards up is " + twoCardsUp);
-        
+
         if (matched == false)
         {
             print("match is false");
@@ -37,11 +50,12 @@ public class MainToken : MonoBehaviour
                     gameControl.GetComponent<GameControl>().AddVisibleFace(faceIndex);
                     matched = gameControl.GetComponent<GameControl>().CheckMatch();
 
-                    if(matched)
+                    if (matched)
                     {
 
-                        foreach (Button o in card) { 
-                           
+                        foreach (Button o in card)
+                        {
+
                             print(card.Length);
                             if (o.CompareTag("Card") && o.image.sprite != back)
                             {
@@ -49,7 +63,7 @@ public class MainToken : MonoBehaviour
                                 o.interactable = false;
                             }
                         }
-                        
+
                     }
                 }
             }
@@ -61,14 +75,12 @@ public class MainToken : MonoBehaviour
         }
         else
         {
-
-
             //button = false;
             thiscard.interactable = false;
             Debug.Log("Can't turn the card anymore");
             //img.sprite = faces[faceIndex];
-
         }
+        print("BackSideVisible: " + BackSideVisible());
     }
 
     private void Awake()

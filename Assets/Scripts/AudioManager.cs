@@ -7,6 +7,8 @@ public class AudioManager : MonoBehaviour
     public Sound[] playedSounds;
     public AudioSource source;
     public AudioClip clip;
+    public GameObject backSideVisible;
+    bool canPlay = false;
 
     void Start()
     {
@@ -23,11 +25,34 @@ public class AudioManager : MonoBehaviour
         audioManager.GetComponent<GameObject>();
         source = audioManager.GetComponent<AudioSource>();
 
+        backSideVisible.GetComponent<MainToken>().BackSideVisible();
+
     }
 
-    public void playSpokenSound()
+    public void PlaySpokenSound()
     {
-        source.PlayOneShot(clip, 0.1f);
+
+        if (backSideVisible)
+            print("backSideVisible == true");
+        {
+            if (!source.isPlaying)
+            {
+                source.PlayOneShot(clip, 0.1f);
+            }
+            else
+            {
+                source.Stop();
+                //source.PlayOneShot(clip, 0.1f);
+            }
+        }
+    }
+
+    public void PlayPlayedSound()
+    {
+        if (!source.isPlaying)
+        {
+            //source.PlayOneShot(clip, 0.1f);
+        }
     }
     public void Play(string name)
     {

@@ -12,9 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Lauri/Lauri - menu (2)  difficulty.unity
     guid: 3b84a6dc3b463384e86ce876ac04a832
   - enabled: 1
-    path: Assets/Scenes/Lauri/Lauri - gameplay relaxed.unity
-    guid: 47632df9fb2a57a4689b089209cd91ce
-  - enabled: 1
     path: Assets/Scenes/Lauri/GameScene.unity
     guid: 6f74f446717f0e948aa6a516ab34cefd
   m_configObjects:
