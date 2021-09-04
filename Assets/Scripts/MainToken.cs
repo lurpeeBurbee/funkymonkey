@@ -1,5 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
+
 
 public class MainToken : MonoBehaviour
 {
@@ -14,10 +16,12 @@ public class MainToken : MonoBehaviour
     public bool matched = false;
     public bool twoCardsUp;
     public GameObject gameCanvas;
+    public TextMeshProUGUI points;
+    int score;
 
     public bool BackSideVisible()
     {
-        if (img.sprite != back)
+        if (img.sprite == back)
         {
             return true;
         }
@@ -36,6 +40,8 @@ public class MainToken : MonoBehaviour
 
         if (matched == false)
         {
+            //GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>().source.Stop();
+
             print("match is false");
 
             if (img.sprite == back)
@@ -51,11 +57,12 @@ public class MainToken : MonoBehaviour
                     matched = gameControl.GetComponent<GameControl>().CheckMatch();
 
                     if (matched)
-                    {
-
+                    { 
+                        
+                        points.text = score.ToString();
+                        score += 3;
                         foreach (Button o in card)
                         {
-
                             print(card.Length);
                             if (o.CompareTag("Card") && o.image.sprite != back)
                             {
@@ -63,7 +70,6 @@ public class MainToken : MonoBehaviour
                                 o.interactable = false;
                             }
                         }
-
                     }
                 }
             }
@@ -81,6 +87,7 @@ public class MainToken : MonoBehaviour
             //img.sprite = faces[faceIndex];
         }
         print("BackSideVisible: " + BackSideVisible());
+
     }
 
     private void Awake()
@@ -93,8 +100,10 @@ public class MainToken : MonoBehaviour
         img.sprite = back;
         matched = gameControl.GetComponent<GameControl>().CheckMatch();
         twoCardsUp = gameControl.GetComponent<GameControl>().TwoCardsUp();
-
-        //button = GetComponent<Button>().IsInteractable();
+        points.GetComponent<TMPro.TextMeshProUGUI>();
+        score = 0;
+    points.text = score.ToString();
+        
 
     }
 }

@@ -37,12 +37,12 @@ public class AudioManager : MonoBehaviour
         {
             if (!source.isPlaying)
             {
-                source.PlayOneShot(clip, 0.1f);
+                source.PlayOneShot(clip, 0.4f);
             }
             else
             {
                 source.Stop();
-                //source.PlayOneShot(clip, 0.1f);
+                source.PlayOneShot(clip, 0.4f);
             }
         }
     }
