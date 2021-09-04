@@ -29,9 +29,7 @@ public class MainToken : MonoBehaviour
         {
             return false;
         }
-
     }
-
 
     public void OnMouseDown()
     {
@@ -58,12 +56,11 @@ public class MainToken : MonoBehaviour
 
                     if (matched)
                     { 
-                        
+                        score += 1;
                         points.text = score.ToString();
-                        score += 3;
                         foreach (Button o in card)
                         {
-                            print(card.Length);
+                            print("cards length: " + card.Length);
                             if (o.CompareTag("Card") && o.image.sprite != back)
                             {
                                 Debug.Log("------Open card: " + o);
@@ -84,10 +81,10 @@ public class MainToken : MonoBehaviour
             //button = false;
             thiscard.interactable = false;
             Debug.Log("Can't turn the card anymore");
-            //img.sprite = faces[faceIndex];
+            img.sprite = faces[faceIndex];
         }
         print("BackSideVisible: " + BackSideVisible());
-
+        Debug.Log("pairs found: "+ score);
     }
 
     private void Awake()
@@ -102,9 +99,20 @@ public class MainToken : MonoBehaviour
         twoCardsUp = gameControl.GetComponent<GameControl>().TwoCardsUp();
         points.GetComponent<TMPro.TextMeshProUGUI>();
         score = 0;
-    points.text = score.ToString();
+        
+       
+
+       
         
 
     }
+
+private void Update() {
+
+     
+         points.text = score.ToString();
+
+}
+
 }
 

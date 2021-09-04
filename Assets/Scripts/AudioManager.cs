@@ -8,7 +8,7 @@ public class AudioManager : MonoBehaviour
     public AudioSource source;
     public AudioClip clip;
     public GameObject backSideVisible;
-    bool canPlay = false;
+    //bool canPlay = false;
 
     void Start()
     {
