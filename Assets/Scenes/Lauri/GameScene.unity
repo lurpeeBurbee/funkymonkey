@@ -435,7 +435,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 314606159}
         m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
-        m_MethodName: PlayPlayedSound
+        m_MethodName: PlaySpokenSound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -574,19 +574,19 @@ MonoBehaviour:
   audioManager: {fileID: 1783039631}
   spokenSounds:
   - clip: {fileID: 8300000, guid: c59dc5e1b7fd11143860594e18637e49, type: 3}
-    volume: 0
+    volume: 0.199
     pitch: 0
     source: {fileID: 0}
   - clip: {fileID: 8300000, guid: a912a252d620e264ebf212f07f860170, type: 3}
-    volume: 0
+    volume: 0.178
     pitch: 0
     source: {fileID: 0}
   - clip: {fileID: 8300000, guid: f284ba61b1a02514dbe9f87cfc544135, type: 3}
-    volume: 0
+    volume: 0.212
     pitch: 0
     source: {fileID: 0}
   - clip: {fileID: 8300000, guid: c733c6a49b23ea440a97c7f09c76c720, type: 3}
-    volume: 0
+    volume: 0.182
     pitch: 0
     source: {fileID: 0}
   - clip: {fileID: 8300000, guid: 51cb4f930eaaab64eb1a0f47214e1335, type: 3}
@@ -1221,7 +1221,7 @@ MonoBehaviour:
   m_ChildAlignment: 2
   m_StartCorner: 1
   m_StartAxis: 1
-  m_CellSize: {x: 120, y: 100}
+  m_CellSize: {x: 100, y: 100}
   m_Spacing: {x: 10, y: 10}
   m_Constraint: 2
   m_ConstraintCount: 2
@@ -1379,7 +1379,7 @@ RectTransform:
   m_GameObject: {fileID: 1106191187}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.08, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1007160260}
   m_RootOrder: 1
@@ -1431,19 +1431,19 @@ MonoBehaviour:
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
+  m_TextStyleHashCode: 2426
   m_overrideHtmlColors: 0
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 29.4
+  m_fontSize: 36
   m_fontSizeBase: 36
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -1472,7 +1472,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -281.25803, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

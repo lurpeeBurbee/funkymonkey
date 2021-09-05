@@ -22,16 +22,12 @@ public class AudioManager : MonoBehaviour
         //    s.source.pitch = s.pitch;
 
         //}
-        audioManager.GetComponent<GameObject>();
+        //audioManager.GetComponent<GameObject>();
         source = audioManager.GetComponent<AudioSource>();
-
         backSideVisible.GetComponent<MainToken>().BackSideVisible();
-
     }
-
     public void PlaySpokenSound()
     {
-
         if (backSideVisible)
             print("backSideVisible == true");
         {

@@ -1,6 +1,6 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
 
 public class MainToken : MonoBehaviour
@@ -17,7 +17,7 @@ public class MainToken : MonoBehaviour
     public bool twoCardsUp;
     public GameObject gameCanvas;
     public TextMeshProUGUI points;
-    int score;
+    private int score = 0;
 
     public bool BackSideVisible()
     {
@@ -30,34 +30,35 @@ public class MainToken : MonoBehaviour
             return false;
         }
     }
-
     public void OnMouseDown()
     {
-        print("match is " + matched);
         print("2 cards up is " + twoCardsUp);
 
         if (matched == false)
         {
             //GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>().source.Stop();
 
-            print("match is false");
+            //print("match is false");
 
             if (img.sprite == back)
             {
-                print("img.sprite == back");
+                //print("img.sprite == back");
                 if (gameControl.GetComponent<GameControl>().TwoCardsUp() == false)
 
                 {
-                    print("TwoCardsUp == false");
+                    //print("TwoCardsUp == false");
 
                     img.sprite = faces[faceIndex];
                     gameControl.GetComponent<GameControl>().AddVisibleFace(faceIndex);
                     matched = gameControl.GetComponent<GameControl>().CheckMatch();
 
                     if (matched)
-                    { 
+                    {
+                        print("MATCH is " + matched);
                         score += 1;
                         points.text = score.ToString();
+
+
                         foreach (Button o in card)
                         {
                             print("cards length: " + card.Length);
@@ -84,9 +85,12 @@ public class MainToken : MonoBehaviour
             img.sprite = faces[faceIndex];
         }
         print("BackSideVisible: " + BackSideVisible());
-        Debug.Log("pairs found: "+ score);
+        Debug.Log("pairs found: " + score);
     }
-
+    private void Start()
+    {
+        points.text = score.ToString();
+    }
     private void Awake()
     {
         thiscard = GetComponent<Button>();
@@ -98,21 +102,22 @@ public class MainToken : MonoBehaviour
         matched = gameControl.GetComponent<GameControl>().CheckMatch();
         twoCardsUp = gameControl.GetComponent<GameControl>().TwoCardsUp();
         points.GetComponent<TMPro.TextMeshProUGUI>();
-        score = 0;
-        
-       
 
-       
-        
+
+
+
+
+
 
     }
 
-private void Update() {
+    private void Update()
+    {
 
-     
-         points.text = score.ToString();
 
-}
+        //points.text = score.ToString();
+
+    }
 
 }
 

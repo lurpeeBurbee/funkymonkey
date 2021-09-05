@@ -12,7 +12,7 @@ public class GameControl : MonoBehaviour
     public int shuffleNum = 0;
     int[] visibleFaces = { -1, -2 };
     bool success;
-
+    
     void Start()
     {
         //int originalLength = faceIndexes.Count;
@@ -45,7 +45,7 @@ public class GameControl : MonoBehaviour
     public bool TwoCardsUp()
     {
         bool cardsUp = false;
-        if(visibleFaces[0] >= 0 && visibleFaces[1] >= 0)
+        if (visibleFaces[0] >= 0 && visibleFaces[1] >= 0)
         {
             cardsUp = true;
             print("2 cards are up!");
