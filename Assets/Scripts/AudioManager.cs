@@ -5,9 +5,14 @@ public class AudioManager : MonoBehaviour
     public GameObject audioManager;
     public Sound[] spokenSounds;
     public Sound[] playedSounds;
-    public AudioSource source;
-    public AudioClip clip;
+    public AudioSource voiceSource;
+    public AudioSource playSource;
+    public AudioClip voiceclip;
+    public AudioClip playclip;
     public GameObject backSideVisible;
+    public GameObject twocardsup;
+    bool backside;
+    public bool match;
     //bool canPlay = false;
 
     void Start()
@@ -23,32 +28,45 @@ public class AudioManager : MonoBehaviour
 
         //}
         //audioManager.GetComponent<GameObject>();
-        source = audioManager.GetComponent<AudioSource>();
-        backSideVisible.GetComponent<MainToken>().BackSideVisible();
+        voiceSource = audioManager.GetComponent<AudioSource>();
+        playSource = audioManager.GetComponent<AudioSource>();
+        backside = backSideVisible.GetComponent<MainToken>().BackSideVisible();
+        //twocards = backSideVisible.FindGame<GameControl>().twoCardsUp();
+        match = twocardsup.GetComponent<GameControl>().CheckMatch();
     }
     public void PlaySpokenSound()
     {
-        if (backSideVisible)
-            print("backSideVisible == true");
+        //source.Stop();
+        if (backside == true)
+        //Debug.Log("backSideVisible == " + backside);
         {
-            if (!source.isPlaying)
+            if (!voiceSource.isPlaying)
             {
-                source.PlayOneShot(clip, 0.4f);
+                voiceSource.PlayOneShot(voiceclip, 0.4f);
+
+
             }
             else
             {
-                source.Stop();
-                source.PlayOneShot(clip, 0.4f);
+                voiceSource.Stop();
+                //source.PlayOneShot(clip, 0.4f);
             }
+        }
+        else
+        {
+            Debug.Log("MATCCHCHCH!-play the playsound!");
+            playSource.PlayOneShot(playclip, 0.5f);
         }
     }
 
     public void PlayPlayedSound()
     {
-        if (!source.isPlaying)
+        if (match == true)
         {
-            //source.PlayOneShot(clip, 0.1f);
+
+
         }
+
     }
     public void Play(string name)
     {

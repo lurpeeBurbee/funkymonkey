@@ -12,6 +12,7 @@ public class GameControl : MonoBehaviour
     public int shuffleNum = 0;
     int[] visibleFaces = { -1, -2 };
     bool success;
+    public GameObject[] objects;
     
     void Start()
     {
@@ -45,6 +46,19 @@ public class GameControl : MonoBehaviour
             cardsUp = true;
             print("2 cards are up!");
         }
+
+        //objects = Game.FindGameObjectsWithTag("Card");
+        //foreach (var obj in objects)
+        //{
+        //    obj.GetComponent<Button>();
+
+        //    if (obj.GetComponent<Button>().image.sprite != back)
+        //    {
+        //        obj.GetComponent<Button>().interactable = false;
+        //    }
+
+        //}
+
         return cardsUp;
     }
 

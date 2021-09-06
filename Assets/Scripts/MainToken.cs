@@ -7,7 +7,7 @@ public class MainToken : MonoBehaviour
 {
     private Button thiscard;
     public object[] card;
-    GameObject objects;
+    //GameObject objects;
     GameObject gameControl;
     Image img;
     public Sprite[] faces;
@@ -54,20 +54,26 @@ public class MainToken : MonoBehaviour
 
                     if (matched)
                     {
+                        thiscard.interactable = false;
                         print("MATCH is " + matched);
                         score += 1;
                         points.text = score.ToString();
 
 
-                        foreach (Button o in card)
+
+                       // Disable both cards
+                        var objects = GameObject.FindGameObjectsWithTag("Card");
+                        foreach (var obj in objects)
                         {
-                            print("cards length: " + card.Length);
-                            if (o.CompareTag("Card") && o.image.sprite != back)
+                            obj.GetComponent<Button>();
+
+                            if (obj.GetComponent<Button>().image.sprite != back)
                             {
-                                Debug.Log("------Open card: " + o);
-                                o.interactable = false;
+                                obj.GetComponent<Button>().interactable = false;
                             }
+
                         }
+
                     }
                 }
             }
@@ -95,7 +101,7 @@ public class MainToken : MonoBehaviour
     {
         thiscard = GetComponent<Button>();
         card = GameObject.FindGameObjectsWithTag("Card");
-       // card = FindObjectsOfType(typeof(Button));
+        // card = FindObjectsOfType(typeof(Button));
         gameControl = GameObject.Find("GameControl");
         img = GetComponent<Image>();
         img.sprite = back;

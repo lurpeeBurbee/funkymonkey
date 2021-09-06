@@ -445,6 +445,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 314606159}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlayPlayedSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &314606154
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -614,9 +626,13 @@ MonoBehaviour:
     volume: 0
     pitch: 0
     source: {fileID: 0}
-  source: {fileID: 1783039633}
-  clip: {fileID: 8300000, guid: f284ba61b1a02514dbe9f87cfc544135, type: 3}
+  voiceSource: {fileID: 1783039633}
+  playSource: {fileID: 1783039633}
+  voiceclip: {fileID: 8300000, guid: 51cb4f930eaaab64eb1a0f47214e1335, type: 3}
+  playclip: {fileID: 8300000, guid: 1b44b764ae726b84fb9633ff2d2c51f1, type: 3}
   backSideVisible: {fileID: 314606151}
+  twocardsup: {fileID: 1079030841}
+  match: 0
 --- !u!1 &405182735
 GameObject:
   m_ObjectHideFlags: 0
@@ -1338,6 +1354,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GameArea: {fileID: 1079030841}
   shuffleNum: 0
+  objects: []
 --- !u!4 &1079030843
 Transform:
   m_ObjectHideFlags: 0
