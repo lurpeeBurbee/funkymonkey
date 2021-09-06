@@ -32,7 +32,7 @@ public class MainToken : MonoBehaviour
     }
     public void OnMouseDown()
     {
-        print("2 cards up is " + twoCardsUp);
+        print("2 cards up is " + twoCardsUp + ", BackSideVisible: " + BackSideVisible());
 
         if (matched == false)
         {
@@ -40,7 +40,7 @@ public class MainToken : MonoBehaviour
 
             //print("match is false");
 
-            if (img.sprite == back)
+            if (BackSideVisible())
             {
                 //print("img.sprite == back");
                 if (gameControl.GetComponent<GameControl>().TwoCardsUp() == false)
@@ -84,7 +84,7 @@ public class MainToken : MonoBehaviour
             Debug.Log("Can't turn the card anymore");
             img.sprite = faces[faceIndex];
         }
-        print("BackSideVisible: " + BackSideVisible());
+        //print("BackSideVisible: " + BackSideVisible());
         Debug.Log("pairs found: " + score);
     }
     private void Start()
@@ -94,8 +94,8 @@ public class MainToken : MonoBehaviour
     private void Awake()
     {
         thiscard = GetComponent<Button>();
-
-        card = FindObjectsOfType(typeof(Button));
+        card = GameObject.FindGameObjectsWithTag("Card");
+       // card = FindObjectsOfType(typeof(Button));
         gameControl = GameObject.Find("GameControl");
         img = GetComponent<Image>();
         img.sprite = back;
