@@ -7,7 +7,7 @@ public class MainToken : MonoBehaviour
 {
     private Button thiscard;
     public object[] card;
-    //GameObject objects;
+    GameObject playAudioList;
     GameObject gameControl;
     Image img;
     public Sprite[] faces;
@@ -108,6 +108,8 @@ public class MainToken : MonoBehaviour
         matched = gameControl.GetComponent<GameControl>().CheckMatch();
         twoCardsUp = gameControl.GetComponent<GameControl>().TwoCardsUp();
         points.GetComponent<TMPro.TextMeshProUGUI>();
+
+        //playAudioList.GetComponent<GameObject>();
 
 
 

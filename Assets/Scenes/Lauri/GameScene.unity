@@ -586,7 +586,7 @@ MonoBehaviour:
   audioManager: {fileID: 1783039631}
   spokenSounds:
   - clip: {fileID: 8300000, guid: c59dc5e1b7fd11143860594e18637e49, type: 3}
-    volume: 0.199
+    volume: 0.36
     pitch: 0
     source: {fileID: 0}
   - clip: {fileID: 8300000, guid: a912a252d620e264ebf212f07f860170, type: 3}
@@ -631,7 +631,7 @@ MonoBehaviour:
   voiceclip: {fileID: 8300000, guid: 51cb4f930eaaab64eb1a0f47214e1335, type: 3}
   playclip: {fileID: 8300000, guid: 1b44b764ae726b84fb9633ff2d2c51f1, type: 3}
   backSideVisible: {fileID: 314606151}
-  twocardsup: {fileID: 1079030841}
+  twocardsup: {fileID: 314606151}
   match: 0
 --- !u!1 &405182735
 GameObject:
