@@ -351,7 +351,7 @@ GameObject:
   - component: {fileID: 314606159}
   m_Layer: 5
   m_Name: Button
-  m_TagString: AudioManager
+  m_TagString: Card
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -402,7 +402,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.75213546, g: 0.6367924, b: 1, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.5188679, g: 0.5188679, b: 0.5188679, a: 0.5019608}
+    m_DisabledColor: {r: 0.5188679, g: 0.5188679, b: 0.5188679, a: 0.6901961}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -436,6 +436,18 @@ MonoBehaviour:
       - m_Target: {fileID: 314606159}
         m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
         m_MethodName: PlaySpokenSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 314606159}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlayPlayedSound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -574,7 +586,7 @@ MonoBehaviour:
   audioManager: {fileID: 1783039631}
   spokenSounds:
   - clip: {fileID: 8300000, guid: c59dc5e1b7fd11143860594e18637e49, type: 3}
-    volume: 0.199
+    volume: 0.36
     pitch: 0
     source: {fileID: 0}
   - clip: {fileID: 8300000, guid: a912a252d620e264ebf212f07f860170, type: 3}
@@ -614,9 +626,13 @@ MonoBehaviour:
     volume: 0
     pitch: 0
     source: {fileID: 0}
-  source: {fileID: 1783039633}
-  clip: {fileID: 8300000, guid: f284ba61b1a02514dbe9f87cfc544135, type: 3}
+  voiceSource: {fileID: 1783039633}
+  playSource: {fileID: 1783039633}
+  voiceclip: {fileID: 8300000, guid: 51cb4f930eaaab64eb1a0f47214e1335, type: 3}
+  playclip: {fileID: 8300000, guid: 1b44b764ae726b84fb9633ff2d2c51f1, type: 3}
   backSideVisible: {fileID: 314606151}
+  twocardsup: {fileID: 314606151}
+  match: 0
 --- !u!1 &405182735
 GameObject:
   m_ObjectHideFlags: 0
@@ -1338,6 +1354,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GameArea: {fileID: 1079030841}
   shuffleNum: 0
+  objects: []
 --- !u!4 &1079030843
 Transform:
   m_ObjectHideFlags: 0
@@ -2841,3 +2858,33 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1828648581}
   m_CullTransparentMesh: 1
+--- !u!1 &2062052088
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2062052089}
+  m_Layer: 0
+  m_Name: Monkey
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2062052089
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2062052088}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 626.63696, y: 139.6352, z: 925.6112}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
