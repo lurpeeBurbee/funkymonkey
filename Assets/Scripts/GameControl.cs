@@ -22,7 +22,13 @@ public class GameControl : MonoBehaviour
         float yPosition = token.transform.position.y;
         float xPosition = token.transform.position.x + 140;
         maxCards = 7;
-        
+
+        // Randomly remove one instrument to avoid getting odd cards
+        int faceToRemove = rnd.Next(0, 4);
+        faceIndexes.Remove(faceToRemove);
+        faceIndexes.Remove(faceToRemove);
+        Debug.Log("Removed " + faceToRemove);
+
         for (int i = 0; i < maxCards; i++)
         {
             shuffleNum = rnd.Next(0, (faceIndexes.Count));
