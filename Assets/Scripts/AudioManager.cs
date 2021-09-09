@@ -42,7 +42,7 @@ public class AudioManager : MonoBehaviour
 
         //playclip = playSource.GetComponent<AudioManager>();
 
-        backside = backSideVisible.GetComponent<MainToken>().BackSideVisible();
+        
         //twocardsup = GameObject.GetComponent<MainToken>().twoCardsUp;
 
     }
@@ -50,11 +50,17 @@ public class AudioManager : MonoBehaviour
     {
         Debug.Log("AudioManager checks the match: " + match);
         //source.Stop();
-        if (backside == true && !twocards)
+
+        backside = backSideVisible.GetComponent<MainToken>().BackSideVisible();
+
+        if (backside == false && !twocards)
         {
+
             //Debug.Log("backSideVisible == " + backside);
             spriteIndex = twocardsup.GetComponent<MainToken>().faceIndex;
             voiceclip = spokenSounds[spriteIndex].clip;
+
+
 
             if (!voiceSource.isPlaying)
             {
@@ -63,11 +69,13 @@ public class AudioManager : MonoBehaviour
             }
             else
             {
+
                 voiceSource.Stop();
                 voiceSource.PlayOneShot(voiceclip, 0.5f);
             
             }
             
+           
             //else
             //{
             //    voiceSource.Stop();
@@ -80,12 +88,22 @@ public class AudioManager : MonoBehaviour
             //        Debug.Log("---------THIS SHOULD NOT HAPPEN!!!");
             //    }
             //}
+        } 
+        
+
+       if(backside == true)
+        {
+            voiceSource.Stop();
         }
+
+       
+       
 
         if(match)
         {
             voiceSource.Stop();
         }
+
     }
     public void PlayPlayedSound()
     {
