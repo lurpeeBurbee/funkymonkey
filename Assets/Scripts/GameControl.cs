@@ -13,9 +13,13 @@ public class GameControl : MonoBehaviour
     int[] visibleFaces = { -1, -2 };
     bool success;
     public GameObject[] objects;
-    
+    int cardsLeft;
+    public GameObject monkeyHead;
+
     void Start()
     {
+        cardsLeft = 1;
+
         //int originalLength = faceIndexes.Count;
         GameObject.FindGameObjectWithTag("StartMusic").GetComponent<StartMusic>().StopStartMusic();
 
@@ -27,7 +31,7 @@ public class GameControl : MonoBehaviour
         int faceToRemove = rnd.Next(0, 4);
         faceIndexes.Remove(faceToRemove);
         faceIndexes.Remove(faceToRemove);
-        Debug.Log("Removed " + faceToRemove);
+        //Debug.Log("Removed " + faceToRemove);
 
         for (int i = 0; i < maxCards; i++)
         {
@@ -39,6 +43,9 @@ public class GameControl : MonoBehaviour
 
             temp.GetComponent<MainToken>().faceIndex = faceIndexes[shuffleNum];
             faceIndexes.Remove(faceIndexes[shuffleNum]);
+            cardsLeft++;
+            
+
 
         }
         token.GetComponent<MainToken>().faceIndex = faceIndexes[0];
@@ -100,7 +107,12 @@ public class GameControl : MonoBehaviour
             visibleFaces[0] = -1;
             visibleFaces[1] = -2;
             success = true;
-            Debug.Log("Found 2 pairs!");
+            cardsLeft-=2;
+            if ( cardsLeft == 0)
+            {
+                monkeyHead.GetComponent<MonkeyScript>().MonkeySound();
+            }
+            Debug.Log("Cards left: " + cardsLeft);
         }
         print("success is " + success);
         return success;

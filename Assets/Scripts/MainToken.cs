@@ -17,7 +17,8 @@ public class MainToken : MonoBehaviour
     public bool twoCardsUp;
     public GameObject gameCanvas;
     public TextMeshProUGUI points;
-    private int score = 0;
+    
+    //private int score = 0;
 
     public bool BackSideVisible()
     {
@@ -30,9 +31,12 @@ public class MainToken : MonoBehaviour
             return false;
         }
     }
+
+
     public void OnMouseDown()
     {
-        print("2 cards up is " + twoCardsUp + ", BackSideVisible: " + BackSideVisible());
+        //print("2 cards up is " + twoCardsUp + ", BackSideVisible: " + BackSideVisible());
+        
 
         if (matched == false)
         {
@@ -56,8 +60,8 @@ public class MainToken : MonoBehaviour
                     {
                         thiscard.interactable = false;
                         print("MATCH is " + matched);
-                        score += 1;
-                        points.text = score.ToString();
+                        //score += 1;
+                        //points.text = score.ToString();
 
 
 
@@ -91,11 +95,11 @@ public class MainToken : MonoBehaviour
             img.sprite = faces[faceIndex];
         }
         //print("BackSideVisible: " + BackSideVisible());
-        Debug.Log("pairs found: " + score);
+        //Debug.Log("pairs found: " + score);
     }
     private void Start()
     {
-        points.text = score.ToString();
+        //points.text = score.ToString();
     }
     private void Awake()
     {
