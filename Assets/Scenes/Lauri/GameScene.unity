@@ -215,7 +215,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontStyle: 5
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -286,7 +286,7 @@ RectTransform:
   m_GameObject: {fileID: 295197678}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: -1.7378, y: 0.88328, z: 1}
+  m_LocalScale: {x: 1.7378, y: 0.88328, z: 1}
   m_Children: []
   m_Father: {fileID: 1377094507}
   m_RootOrder: 0
@@ -1218,7 +1218,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -11.754999, y: -2.2749915}
+  m_AnchoredPosition: {x: -11.754999, y: -2.2749634}
   m_SizeDelta: {x: 28.69, y: -44.550014}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &821128116
@@ -1274,7 +1274,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontStyle: 5
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -2074,7 +2074,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1377094506}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -96}
+  m_LocalPosition: {x: 0, y: 0, z: 96}
   m_LocalScale: {x: 2.3999999, y: 2.22, z: 2.3999999}
   m_Children:
   - {fileID: 295197679}
@@ -2457,7 +2457,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.1702118, g: 0.7075472, b: 0.39085552, a: 1}
+  m_Color: {r: 0.14117648, g: 0.7647059, b: 0.43137255, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3081,6 +3081,8 @@ GameObject:
   - component: {fileID: 2062052090}
   - component: {fileID: 2062052091}
   - component: {fileID: 2062052093}
+  - component: {fileID: 2062052092}
+  - component: {fileID: 2062052094}
   m_Layer: 0
   m_Name: Monkey
   m_TagString: Untagged
@@ -3095,7 +3097,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2062052088}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 748.1, y: 287.1, z: 0}
   m_LocalScale: {x: 12, y: 13.6, z: 1}
   m_Children: []
@@ -3250,6 +3252,25 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!320 &2062052092
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2062052088}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: 0f893d9d49d4c0e4d8b5c4d3a8f0ff8e, type: 2}
+  m_InitialState: 0
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: 3169160315820539007, guid: 0f893d9d49d4c0e4d8b5c4d3a8f0ff8e, type: 2}
+    value: {fileID: 2062052094}
+  m_ExposedReferences:
+    m_References: []
 --- !u!114 &2062052093
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3265,6 +3286,25 @@ MonoBehaviour:
   monkeyAudio: {fileID: 2062052091}
   monkeySound: {fileID: 8300000, guid: 8ee8676b09d291b46b9059e1620eae87, type: 3}
   monkey: {fileID: 2062052090}
+--- !u!95 &2062052094
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2062052088}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0dd412db8c283f3479a47aa1e465ebd6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2127099722
 GameObject:
   m_ObjectHideFlags: 0
