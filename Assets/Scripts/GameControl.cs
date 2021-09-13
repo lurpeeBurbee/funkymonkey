@@ -122,6 +122,7 @@ public class GameControl : MonoBehaviour
     {
         token = GameObject.Find("Button");
         GameArea = GameObject.Find("Main Canvas");
+
     }
 
 }

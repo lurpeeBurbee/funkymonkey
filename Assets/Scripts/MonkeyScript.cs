@@ -6,13 +6,13 @@ public class MonkeyScript : MonoBehaviour
     public AudioSource monkeyAudio;
     public AudioClip monkeySound;
     public SpriteRenderer monkey;
-    private PlayableDirector playableDirector;
+    //private PlayableDirector playableDirector;
 
     void Start()
     {
       
         monkeyAudio.GetComponent<AudioSource>();
-
+        //playableDirector = GetComponent<PlayableDirector>();
         monkey = GetComponent<SpriteRenderer>();
     }
 
@@ -30,8 +30,9 @@ public class MonkeyScript : MonoBehaviour
 
     public void playMonkeyAnimation() 
     {
+/*         Debug.Log("playMonkeyAnimation mark reached");
         playableDirector = GetComponent<PlayableDirector>();
-        playableDirector.Stop();
+        //playableDirector.Stop();
         monkey = GetComponent<SpriteRenderer>();
         if(monkey.enabled == true)
         {
@@ -42,7 +43,7 @@ public class MonkeyScript : MonoBehaviour
         else
         {
             playableDirector.Stop();
-        }
+        } */
     }
 
     void Update()
