@@ -1,11 +1,14 @@
 using UnityEngine;
 using UnityEngine.Playables;
+using System.Collections;
 public class MonkeyScript : MonoBehaviour
 {
 
     public AudioSource monkeyAudio;
     public AudioClip monkeySound;
+    public AudioClip gameFinished;
     public SpriteRenderer monkey;
+    public GameObject gameFinishedBox;
     //private PlayableDirector playableDirector;
 
     void Start()
@@ -14,15 +17,27 @@ public class MonkeyScript : MonoBehaviour
         monkeyAudio.GetComponent<AudioSource>();
         //playableDirector = GetComponent<PlayableDirector>();
         monkey = GetComponent<SpriteRenderer>();
+        gameFinishedBox.GetComponent<GameObject>();
+        gameFinishedBox.SetActive(false);
     }
 
+    IEnumerator WaitSoundToFinish()
+    {
+        monkeyAudio.PlayOneShot(monkeySound);
+        monkey.enabled = true;
+
+
+        yield return new WaitWhile(() => monkeyAudio.isPlaying);
+
+        monkeyAudio.PlayOneShot(gameFinished, 0.4f);
+    }
     public void MonkeySound()
     {
 
         if (monkey.enabled == false)
         {
-            monkeyAudio.PlayOneShot(monkeySound);
-            monkey.enabled = true;
+            gameFinishedBox.SetActive(true);
+            StartCoroutine(WaitSoundToFinish());
 
         }
 
