@@ -7,7 +7,7 @@ public class GameControl : MonoBehaviour
     public GameObject GameArea;
     GameObject token;
     List<int> faceIndexes = new List<int> { 0, 1, 2, 3, 4, 0, 1, 2, 3, 4 };
-    int maxCards;
+    public int maxCards;
     public static System.Random rnd = new System.Random();
     public int shuffleNum = 0;
     int[] visibleFaces = { -1, -2 };
@@ -25,30 +25,42 @@ public class GameControl : MonoBehaviour
 
         float yPosition = token.transform.position.y;
         float xPosition = token.transform.position.x + 140;
-        maxCards = 7;
+        //maxCards = 7;
+
+        List<int> facesThisRound = new List<int>();
+        int uniqueCards = (maxCards+1) / 2;
+
+        for (int i = 0; i < uniqueCards; i++)
+        {
+            shuffleNum = rnd.Next(0, (faceIndexes.Count));
+            int num = faceIndexes[shuffleNum];
+
+            facesThisRound.Add(num);
+            facesThisRound.Add(num);
+
+            faceIndexes.Remove(num);
+            faceIndexes.Remove(num);
+        }
 
         // Randomly remove one instrument to avoid getting odd cards
-        int faceToRemove = rnd.Next(0, 4);
+        /*int faceToRemove = rnd.Next(0, 4);
         faceIndexes.Remove(faceToRemove);
-        faceIndexes.Remove(faceToRemove);
+        faceIndexes.Remove(faceToRemove);*/
         //Debug.Log("Removed " + faceToRemove);
 
         for (int i = 0; i < maxCards; i++)
         {
-            shuffleNum = rnd.Next(0, (faceIndexes.Count));
+            shuffleNum = rnd.Next(0, (facesThisRound.Count));
 
             var temp = Instantiate(token, new Vector3(
                 xPosition, yPosition, 0),
                 Quaternion.identity, GameArea.transform);
 
-            temp.GetComponent<MainToken>().faceIndex = faceIndexes[shuffleNum];
-            faceIndexes.Remove(faceIndexes[shuffleNum]);
+            temp.GetComponent<MainToken>().faceIndex = facesThisRound[shuffleNum];
+            facesThisRound.Remove(facesThisRound[shuffleNum]);
             cardsLeft++;
-            
-
-
         }
-        token.GetComponent<MainToken>().faceIndex = faceIndexes[0];
+        token.GetComponent<MainToken>().faceIndex = facesThisRound[0];
     }
 
     public bool TwoCardsUp()
