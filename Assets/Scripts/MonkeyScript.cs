@@ -13,7 +13,6 @@ public class MonkeyScript : MonoBehaviour
 
     void Start()
     {
-      
         monkeyAudio.GetComponent<AudioSource>();
         //playableDirector = GetComponent<PlayableDirector>();
         monkey = GetComponent<SpriteRenderer>();
@@ -28,15 +27,16 @@ public class MonkeyScript : MonoBehaviour
 
 
         yield return new WaitWhile(() => monkeyAudio.isPlaying);
-
+        gameFinishedBox.SetActive(true);
         monkeyAudio.PlayOneShot(gameFinished, 0.4f);
+
     }
     public void MonkeySound()
     {
 
         if (monkey.enabled == false)
         {
-            gameFinishedBox.SetActive(true);
+            
             StartCoroutine(WaitSoundToFinish());
 
         }

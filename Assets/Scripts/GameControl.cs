@@ -6,7 +6,7 @@ public class GameControl : MonoBehaviour
 {
     public GameObject GameArea;
     GameObject token;
-    List<int> faceIndexes = new List<int> { 0, 1, 2, 3, 4, 0, 1, 2, 3, 4 };
+    List<int> faceIndexes = new List<int> { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 };
     public int maxCards;
     public static System.Random rnd = new System.Random();
     public int shuffleNum = 0;
