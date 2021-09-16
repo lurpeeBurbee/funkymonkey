@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Lauri/Lauri - menu (2)  difficulty.unity
     guid: 3b84a6dc3b463384e86ce876ac04a832
   - enabled: 1
-    path: Assets/Scenes/Lauri/GameScene.unity
+    path: Assets/Scenes/Sanna/GameScene.unity
     guid: 6f74f446717f0e948aa6a516ab34cefd
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: e7b5010a1215d36418b27f23ce6ed2c0, type: 2}
