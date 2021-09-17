@@ -8,6 +8,8 @@ public class MonkeyScript : MonoBehaviour
     public AudioClip monkeySound;
     public AudioClip gameFinished;
     public SpriteRenderer monkey;
+    public GameObject dancingMonkey;
+
     public GameObject gameFinishedBox;
     //private PlayableDirector playableDirector;
 
@@ -15,6 +17,7 @@ public class MonkeyScript : MonoBehaviour
     {
         monkeyAudio.GetComponent<AudioSource>();
         //playableDirector = GetComponent<PlayableDirector>();
+        dancingMonkey.GetComponent<GameObject>();
         monkey = GetComponent<SpriteRenderer>();
         gameFinishedBox.GetComponent<GameObject>();
         gameFinishedBox.SetActive(false);
@@ -23,7 +26,7 @@ public class MonkeyScript : MonoBehaviour
     IEnumerator WaitSoundToFinish()
     {
         monkeyAudio.PlayOneShot(monkeySound);
-        monkey.enabled = true;
+        dancingMonkey.SetActive(true);
 
 
         yield return new WaitWhile(() => monkeyAudio.isPlaying);

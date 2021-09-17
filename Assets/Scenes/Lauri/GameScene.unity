@@ -2690,12 +2690,12 @@ GameObject:
   m_Component:
   - component: {fileID: 942285727}
   m_Layer: 3
-  m_Name: GameObject (1)
+  m_Name: dancing monkey
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &942285727
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4945,6 +4945,7 @@ MonoBehaviour:
   monkeySound: {fileID: 8300000, guid: 8ee8676b09d291b46b9059e1620eae87, type: 3}
   gameFinished: {fileID: 8300000, guid: fe588714a1c1efa49b160982f6efca32, type: 3}
   monkey: {fileID: 2062052090}
+  dancingMonkey: {fileID: 942285726}
   gameFinishedBox: {fileID: 737376262}
 --- !u!95 &2062052094
 Animator:
