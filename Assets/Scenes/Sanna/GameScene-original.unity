@@ -4319,6 +4319,7 @@ MonoBehaviour:
   monkeySound: {fileID: 8300000, guid: 8ee8676b09d291b46b9059e1620eae87, type: 3}
   gameFinished: {fileID: 8300000, guid: fe588714a1c1efa49b160982f6efca32, type: 3}
   monkey: {fileID: 2062052090}
+  dancingMonkey: {fileID: 0}
   gameFinishedBox: {fileID: 737376262}
 --- !u!95 &2062052094
 Animator:
