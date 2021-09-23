@@ -7,9 +7,10 @@ public class ButtonSounds : MonoBehaviour
     public AudioSource buttonSounds;
     public AudioClip buttonClip;
 
+
     void Start()
     {
-       
+        
     }
     public void ButtonSound()
     {
@@ -17,8 +18,8 @@ public class ButtonSounds : MonoBehaviour
             buttonSounds.PlayOneShot(buttonClip);
            
     }
-    void Update()
-    {
-        
-    }
+
+
+
+
 }
