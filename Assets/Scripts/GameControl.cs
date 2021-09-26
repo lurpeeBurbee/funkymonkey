@@ -18,6 +18,7 @@ public class GameControl : MonoBehaviour
 
     void Start()
     {
+        maxCards = CardAmountData.cardAmount-1;
         cardsLeft = 1;
 
         //int originalLength = faceIndexes.Count;
