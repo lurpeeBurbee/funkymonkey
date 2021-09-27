@@ -316,7 +316,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: e67857c218000304cb99bfab3a3c0fea, type: 3}
+  m_Texture: {fileID: 2800000, guid: b11bbfe39399a6a4a8cce23a77abaff1, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -2323,7 +2323,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 865
+    m_Left: 910
     m_Right: 0
     m_Top: -155
     m_Bottom: 0
