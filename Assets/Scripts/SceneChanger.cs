@@ -5,10 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class SceneChanger : MonoBehaviour
 {
+    public static bool clearMedals;
     public string scene;
     public void loadScene()
     {
         SceneManager.LoadScene(scene);
+
+       clearMedals = true;
+        
     }
 
     public void quitApp()
@@ -17,7 +21,7 @@ public class SceneChanger : MonoBehaviour
     }
     void Start()
     {
-        
+        //clearMedals = false;
     }
 
     void Update()

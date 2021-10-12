@@ -121,9 +121,14 @@ public class GameControl : MonoBehaviour
             visibleFaces[1] = -2;
             success = true;
             cardsLeft-=2;
+
+            // Game over
             if ( cardsLeft == 0)
             {
                 monkeyHead.GetComponent<MonkeyScript>().MonkeySound();
+                MedalManager.hasPlayed = true;
+                SceneChanger.clearMedals = false;
+
             }
             Debug.Log("Cards left: " + cardsLeft);
         }
