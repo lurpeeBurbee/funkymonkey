@@ -588,7 +588,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42fff347d072dbe4683e86c139e9c7b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  monkeyMedalHead: {fileID: 1720059970}
+  monkeyMedalHead1: {fileID: 1720059970}
+  monkeyMedalHead2: {fileID: 1573212605}
+  monkeyMedalHead3: {fileID: 980707029}
 --- !u!4 &668369466
 Transform:
   m_ObjectHideFlags: 0
@@ -1314,11 +1316,11 @@ GameObject:
   - component: {fileID: 980707030}
   m_Layer: 5
   m_Name: head-medal-3
-  m_TagString: Untagged
+  m_TagString: medalhead
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &980707030
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2184,11 +2186,11 @@ GameObject:
   - component: {fileID: 1573212606}
   m_Layer: 5
   m_Name: head-medal-2
-  m_TagString: Untagged
+  m_TagString: medalhead
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1573212606
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2529,11 +2531,11 @@ GameObject:
   - component: {fileID: 1720059971}
   m_Layer: 5
   m_Name: head-medal-1
-  m_TagString: Untagged
+  m_TagString: medalhead
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1720059971
 RectTransform:
   m_ObjectHideFlags: 0

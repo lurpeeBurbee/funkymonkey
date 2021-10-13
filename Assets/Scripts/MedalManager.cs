@@ -6,21 +6,30 @@ public class MedalManager : MonoBehaviour
 {
     public static int cardAmount;
     public static bool hasPlayed;
-    public GameObject monkeyMedalHead;
+    public GameObject monkeyMedalHead1;
+    public GameObject monkeyMedalHead2;
+    public GameObject monkeyMedalHead3;
 
     void Start()
     {
-        if(SceneChanger.clearMedals == true)
+        Debug.Log(SceneChanger.clearMedals);
+        Debug.Log(ChooseCardAmount.cardsAmountForMedal);
+
+        if (SceneChanger.clearMedals == true)
         {
-            monkeyMedalHead.SetActive(false);
+
+            monkeyMedalHead1.SetActive(false);
+            monkeyMedalHead2.SetActive(false);
+            monkeyMedalHead3.SetActive(false);
         }
 
         if(hasPlayed == true && ChooseCardAmount.cardsAmountForMedal == 6)
         {
-            monkeyMedalHead.SetActive(true);
+            monkeyMedalHead1.SetActive(true);
+            monkeyMedalHead2.SetActive(false);
+            monkeyMedalHead3.SetActive(false);
         }
 
-        print(SceneChanger.clearMedals);
     }
 
     void Update()
