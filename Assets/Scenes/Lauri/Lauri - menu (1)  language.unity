@@ -1610,7 +1610,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1989597696}
         m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
-        m_MethodName: loadScene
+        m_MethodName: LoadScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1816,7 +1816,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1989597696}
           m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
-          m_MethodName: disableMedalHeads
+          m_MethodName: DisableMedalHeads
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}

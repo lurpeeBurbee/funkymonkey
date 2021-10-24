@@ -111,7 +111,6 @@ public class GameControl : MonoBehaviour
             visibleFaces[1] = -2;
         }
     }
-
     public bool CheckMatch()
     {
         success = false;
@@ -120,7 +119,7 @@ public class GameControl : MonoBehaviour
             visibleFaces[0] = -1;
             visibleFaces[1] = -2;
             success = true;
-            cardsLeft-=2;
+            cardsLeft -= 2;
 
             // Game over
             if ( cardsLeft == 0)
@@ -128,11 +127,8 @@ public class GameControl : MonoBehaviour
                 monkeyHead.GetComponent<MonkeyScript>().MonkeySound();
                 MedalManager.hasPlayed = true;
                 SceneChanger.clearMedals = false;
-
             }
-            Debug.Log("Cards left: " + cardsLeft);
         }
-        print("success is " + success);
         return success;
     }
 

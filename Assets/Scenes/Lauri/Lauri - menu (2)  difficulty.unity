@@ -913,7 +913,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 884844126}
         m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
-        m_MethodName: loadScene
+        m_MethodName: LoadScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1244,7 +1244,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 889521713}
         m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
-        m_MethodName: loadScene
+        m_MethodName: LoadScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1445,7 +1445,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 985656018}
         m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
-        m_MethodName: loadScene
+        m_MethodName: LoadScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2928,7 +2928,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1989597696}
         m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
-        m_MethodName: loadScene
+        m_MethodName: LoadScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

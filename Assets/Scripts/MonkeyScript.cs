@@ -46,7 +46,7 @@ public class MonkeyScript : MonoBehaviour
 
     }
 
-    public void playMonkeyAnimation() 
+    public void PlayMonkeyAnimation() 
     {
 /*         Debug.Log("playMonkeyAnimation mark reached");
         playableDirector = GetComponent<PlayableDirector>();

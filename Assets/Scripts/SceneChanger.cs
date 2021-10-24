@@ -7,17 +7,17 @@ public class SceneChanger : MonoBehaviour
 {
     public static bool clearMedals;
     public string scene;
-    public void loadScene()
+    public void LoadScene()
     {
         SceneManager.LoadScene(scene);
 
     }
 
-    public void disableMedalHeads()
+    public void DisableMedalHeads()
     {
         clearMedals = true;
     }
-    public void quitApp()
+    public void QuitApp()
     {
         Application.Quit();
     }
