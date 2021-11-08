@@ -1,21 +1,22 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SceneChanger : MonoBehaviour
 {
-    public static bool clearMedals;
     public string scene;
     public void LoadScene()
     {
         SceneManager.LoadScene(scene);
-
     }
 
     public void DisableMedalHeads()
     {
-        clearMedals = true;
+        int currentScene = SceneManager.GetActiveScene().buildIndex;
+        if (currentScene == 0)
+        {
+            GlobalScript.hideAllMedals = true;
+            Debug.Log("clearMedals = " + GlobalScript.hideAllMedals);
+        }
     }
     public void QuitApp()
     {
@@ -23,11 +24,11 @@ public class SceneChanger : MonoBehaviour
     }
     void Start()
     {
-        clearMedals = false;
+
     }
 
     void Update()
     {
-        
+
     }
 }

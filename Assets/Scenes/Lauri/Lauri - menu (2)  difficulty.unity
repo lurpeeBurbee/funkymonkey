@@ -923,6 +923,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 668369465}
+        m_TargetAssemblyTypeName: MedalManager, Assembly-CSharp
+        m_MethodName: HideAllMedals
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &884844128
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1314,13 +1326,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 980707030}
+  - component: {fileID: 980707031}
   m_Layer: 5
   m_Name: head-medal-3
   m_TagString: medalhead
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &980707030
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1342,6 +1355,18 @@ RectTransform:
   m_AnchoredPosition: {x: 646, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &980707031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 980707029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60b03b1e43cda5a4bb6d77cb2ced581c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &985656009
 GameObject:
   m_ObjectHideFlags: 0
@@ -2184,13 +2209,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1573212606}
+  - component: {fileID: 1573212607}
   m_Layer: 5
   m_Name: head-medal-2
   m_TagString: medalhead
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1573212606
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2212,6 +2238,18 @@ RectTransform:
   m_AnchoredPosition: {x: 326, y: -6}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1573212607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1573212605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60b03b1e43cda5a4bb6d77cb2ced581c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1587153102
 GameObject:
   m_ObjectHideFlags: 0
@@ -2529,13 +2567,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1720059971}
+  - component: {fileID: 1720059972}
   m_Layer: 5
   m_Name: head-medal-1
   m_TagString: medalhead
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1720059971
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2557,6 +2596,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1720059972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1720059970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60b03b1e43cda5a4bb6d77cb2ced581c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1802011871
 GameObject:
   m_ObjectHideFlags: 0

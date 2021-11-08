@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ChooseCardAmount : MonoBehaviour
+public class 
+    ChooseCardAmount : MonoBehaviour
 {
     public static int cardsAmountForMedal;
 

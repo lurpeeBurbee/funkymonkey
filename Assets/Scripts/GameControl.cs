@@ -124,9 +124,10 @@ public class GameControl : MonoBehaviour
             // Game over
             if ( cardsLeft == 0)
             {
+                GlobalScript.hideAllMedals = false;
                 monkeyHead.GetComponent<MonkeyScript>().MonkeySound();
                 MedalManager.hasPlayed = true;
-                SceneChanger.clearMedals = false;
+                
             }
         }
         return success;

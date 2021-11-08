@@ -11,10 +11,10 @@ public class ShowHideMonkeyhead : MonoBehaviour
     }
     public void ShowMonkeyHead()
     {
-        monkeyHead.SetActive(true);
+       // monkeyHead.SetActive(true);
     }
     public void HideMonkeyHead()
     {
-        monkeyHead.SetActive(false);
+      //  monkeyHead.SetActive(false);
     }
 }
