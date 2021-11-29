@@ -4,6 +4,7 @@ public class MedalManager : MonoBehaviour
 {
     public static int cardAmount;
     public static bool hasPlayed;
+
     public GameObject monkeyMedalHead1;
     public GameObject monkeyMedalHead2;
     public GameObject monkeyMedalHead3;
@@ -49,14 +50,10 @@ public class MedalManager : MonoBehaviour
     {
         if (GlobalScript.hideAllMedals == true)
         {
-
-
             monkeyMedalHead1.SetActive(false);
             monkeyMedalHead2.SetActive(false);
             monkeyMedalHead3.SetActive(false);
-            //Destroy(monkeyMedalHead1);
-            //Destroy(monkeyMedalHead2);
-            //Destroy(monkeyMedalHead3);
+ 
         }
 
 

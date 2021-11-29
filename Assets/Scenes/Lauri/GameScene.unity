@@ -4049,7 +4049,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 120c551e0a522214090578ca8f4b0254, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scene: Lauri - menu (2)  difficulty
+  scene: Difficulty
 --- !u!114 &1377094509
 MonoBehaviour:
   m_ObjectHideFlags: 0

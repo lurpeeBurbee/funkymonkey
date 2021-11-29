@@ -127,7 +127,7 @@ public class GameControl : MonoBehaviour
                 GlobalScript.hideAllMedals = false;
                 monkeyHead.GetComponent<MonkeyScript>().MonkeySound();
                 MedalManager.hasPlayed = true;
-                
+
             }
         }
         return success;

@@ -7,6 +7,13 @@ public class SceneChanger : MonoBehaviour
     public void LoadScene()
     {
         SceneManager.LoadScene(scene);
+
+        // To prevent medal showing after one has been achieved and
+        // returing from another game without finishing:
+        if (SceneManager.GetActiveScene().buildIndex == 1)
+        {
+            MedalManager.hasPlayed = false;
+        }
     }
 
     public void DisableMedalHeads()
