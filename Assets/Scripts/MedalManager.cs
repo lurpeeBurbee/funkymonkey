@@ -3,7 +3,7 @@ using UnityEngine;
 public class MedalManager : MonoBehaviour
 {
     public static int cardAmount;
-    public static bool hasPlayed;
+    public static bool hasPlayed; // Where does this come from?
 
     public GameObject monkeyMedalHead1;
     public GameObject monkeyMedalHead2;
