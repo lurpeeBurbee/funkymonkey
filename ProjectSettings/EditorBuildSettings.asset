@@ -6,10 +6,10 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Lauri/Lauri - menu (1)  language.unity
+    path: Assets/Scenes/Lauri/StartMenu.unity
     guid: 4284bc5353a35a84ebee294eb00c11ec
   - enabled: 1
-    path: Assets/Scenes/Lauri/Lauri - menu (2)  difficulty.unity
+    path: Assets/Scenes/Lauri/Difficulty.unity
     guid: 3b84a6dc3b463384e86ce876ac04a832
   - enabled: 1
     path: Assets/Scenes/Lauri/GameScene.unity

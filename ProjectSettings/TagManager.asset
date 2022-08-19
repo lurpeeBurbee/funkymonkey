@@ -7,6 +7,7 @@ TagManager:
   - Card
   - StartMusic
   - AudioManager
+  - medalhead
   layers:
   - Default
   - TransparentFX

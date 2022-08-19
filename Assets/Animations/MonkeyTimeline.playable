@@ -371,7 +371,7 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0
-    functionName: playMonkeyAnimation
+    functionName: PlayMonkeyAnimation
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

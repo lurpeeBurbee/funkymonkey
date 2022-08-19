@@ -25,6 +25,7 @@ public class MonkeyScript : MonoBehaviour
 
     IEnumerator WaitSoundToFinish()
     {
+
         monkeyAudio.PlayOneShot(monkeySound);
         dancingMonkey.SetActive(true);
 
@@ -32,6 +33,7 @@ public class MonkeyScript : MonoBehaviour
         yield return new WaitWhile(() => monkeyAudio.isPlaying);
         gameFinishedBox.SetActive(true);
         monkeyAudio.PlayOneShot(gameFinished, 0.4f);
+       
 
     }
     public void MonkeySound()
@@ -46,7 +48,7 @@ public class MonkeyScript : MonoBehaviour
 
     }
 
-    public void playMonkeyAnimation() 
+    public void PlayMonkeyAnimation() 
     {
 /*         Debug.Log("playMonkeyAnimation mark reached");
         playableDirector = GetComponent<PlayableDirector>();
